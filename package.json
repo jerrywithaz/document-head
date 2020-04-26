@@ -1,0 +1,60 @@
+{
+  "name": "@jerrywithaz/document-head",
+  "version": "1.0.0",
+  "description": "Append React Nodes to Document Head",
+  "keywords": [
+    "react",
+    "portal",
+    "head"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Zerry Hogan",
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-typescript": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0",
+    "fork-ts-checker-webpack-plugin": "^4.1.3",
+    "ts-loader": "^7.0.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerrywithaz/document-head.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jerrywithaz/document-head.git"
+  }
+}
